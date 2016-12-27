@@ -26,7 +26,7 @@ class TileBackground extends Sprite
 	{
 		bgTileSheets.set("grass", createTilesheet("img/background/grass.png"));
 		bgTileSheets.set("road", createTilesheet("img/background/road.png"));
-		bgTileSheets.set("tlo", createTilesheet("img/background/grass.png"));
+		bgTileSheets.set("background", createTilesheet("img/background/background.png"));
 	}
 	
 	public function new(path:String) 

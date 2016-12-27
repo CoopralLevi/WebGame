@@ -62,12 +62,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		path.set ("img/background/background.png", "img/background/background.png");
+		type.set ("img/background/background.png", AssetType.IMAGE);
 		path.set ("img/background/grass.png", "img/background/grass.png");
 		type.set ("img/background/grass.png", AssetType.IMAGE);
 		path.set ("img/background/road.png", "img/background/road.png");
 		type.set ("img/background/road.png", AssetType.IMAGE);
-		path.set ("img/background/tlo.png", "img/background/tlo.png");
-		type.set ("img/background/tlo.png", AssetType.IMAGE);
 		path.set ("img/characters/player.png", "img/characters/player.png");
 		type.set ("img/characters/player.png", AssetType.IMAGE);
 		path.set ("levels/1", "levels/1");
@@ -79,13 +79,13 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "img/background/background.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "img/background/grass.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "img/background/road.png";
-		path.set (id, id);
-		type.set (id, AssetType.IMAGE);
-		id = "img/background/tlo.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "img/characters/player.png";

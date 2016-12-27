@@ -23,11 +23,11 @@ ApplicationMain.create = function() {
 	ApplicationMain.preloader.create(ApplicationMain.config);
 	var urls = [];
 	var types = [];
+	urls.push("img/background/background.png");
+	types.push("IMAGE");
 	urls.push("img/background/grass.png");
 	types.push("IMAGE");
 	urls.push("img/background/road.png");
-	types.push("IMAGE");
-	urls.push("img/background/tlo.png");
 	types.push("IMAGE");
 	urls.push("img/characters/player.png");
 	types.push("IMAGE");
@@ -57,7 +57,7 @@ ApplicationMain.init = function() {
 	if(total == 0) ApplicationMain.start();
 };
 ApplicationMain.main = function() {
-	ApplicationMain.config = { build : "1", company : "TTGTeam", file : "WebGame", fps : 60, name : "WebGame", orientation : "", packageName : "ttg.game.WebGame", version : "1.0.0", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 600, parameters : "{}", resizable : true, stencilBuffer : true, title : "WebGame", vsync : false, width : 800, x : null, y : null}]};
+	ApplicationMain.config = { build : "54", company : "TTGTeam", file : "WebGame", fps : 60, name : "WebGame", orientation : "", packageName : "ttg.game.WebGame", version : "1.0.0", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 600, parameters : "{}", resizable : true, stencilBuffer : true, title : "WebGame", vsync : false, width : 800, x : null, y : null}]};
 };
 ApplicationMain.start = function() {
 	var hasMain = false;
@@ -936,13 +936,13 @@ var DefaultAssetLibrary = function() {
 	this.path = new haxe_ds_StringMap();
 	lime_AssetLibrary.call(this);
 	var id;
+	id = "img/background/background.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
 	id = "img/background/grass.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "img/background/road.png";
-	this.path.set(id,id);
-	this.type.set(id,"IMAGE");
-	id = "img/background/tlo.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "img/characters/player.png";
@@ -6095,6 +6095,9 @@ openfl_geom_Point.prototype = {
 	,setTo: function(xa,ya) {
 		this.x = xa;
 		this.y = ya;
+	}
+	,get_length: function() {
+		return Math.sqrt(this.x * this.x + this.y * this.y);
 	}
 	,__class__: openfl_geom_Point
 };
@@ -11863,6 +11866,7 @@ ttg_game_Game.prototype = {
 	,update: function() {
 		if(this.state == ttg_game_GameState.Playing) this.level.update();
 		this.render();
+		if(this.state == ttg_game_GameState.Paused) this.level.pausedUpdate();
 	}
 	,render: function() {
 		this.level.render();
@@ -11872,6 +11876,12 @@ ttg_game_Game.prototype = {
 		l.load(this);
 		this.level = l;
 		this.main.addChild(this.fps);
+	}
+	,pause: function() {
+		this.state = ttg_game_GameState.Paused;
+	}
+	,unPause: function() {
+		this.state = ttg_game_GameState.Playing;
 	}
 	,__class__: ttg_game_Game
 };
@@ -11918,6 +11928,7 @@ ttg_game_gameobject_PhysObject.prototype = $extend(ttg_game_gameobject_GameObjec
 		}
 		this.forces = [];
 		this.velocity = this.velocity.add(netForce);
+		if(this.velocity.get_length() < 0.01) this.velocity = new openfl_geom_Point();
 		this.addForce(new openfl_geom_Point(-this.velocity.x * this.friction,-this.velocity.y * this.friction));
 		var _g2 = 0;
 		var _g11 = this.level.colliders;
@@ -12097,6 +12108,8 @@ ttg_game_level_Level.prototype = {
 			obj.update();
 		}
 	}
+	,pausedUpdate: function() {
+	}
 	,render: function() {
 		this.bg.render();
 		var _g = 0;
@@ -12139,6 +12152,7 @@ ttg_game_level_Level1.prototype = $extend(ttg_game_level_Level.prototype,{
 	load: function(game) {
 		var _g = this;
 		ttg_game_level_Level.prototype.load.call(this,game);
+		this.g = game;
 		this.bg = new ttg_game_level_TileBackground("levels/1");
 		this.main.addChild(this.bg);
 		new ttg_game_gameobject_ui_ButtonObject(this,700,500,100,50,"Menu",function(e) {
@@ -12157,6 +12171,21 @@ ttg_game_level_Level1.prototype = $extend(ttg_game_level_Level.prototype,{
 		this.addCollider(new ttg_game_physics_BorderCollider(false,true,800));
 		this.addCollider(new ttg_game_physics_BorderCollider(true,true,600));
 		this.main.addChild(this.debugSprite);
+		this.transitionGraphic = new openfl_display_Sprite();
+		this.main.addChild(this.transitionGraphic);
+		game.pause();
+		this.transitionTimer = 240;
+	}
+	,pausedUpdate: function() {
+		this.transitionTimer--;
+		this.transitionGraphic.get_graphics().clear();
+		this.transitionGraphic.get_graphics().beginFill(0,this.transitionTimer / 240);
+		this.transitionGraphic.get_graphics().drawRect(0,0,800,600);
+		this.transitionGraphic.get_graphics().endFill();
+		if(this.transitionTimer <= 0) {
+			this.g.unPause();
+			this.main.removeChild(this.transitionGraphic);
+		}
 	}
 	,__class__: ttg_game_level_Level1
 });
@@ -12172,7 +12201,7 @@ ttg_game_level_LevelMenu.prototype = $extend(ttg_game_level_Level.prototype,{
 		ttg_game_level_Level.prototype.load.call(this,game);
 		this.bg = new ttg_game_level_TileBackground("levels/Menu");
 		this.main.addChild(this.bg);
-		new ttg_game_gameobject_ui_ButtonObject(this,400,300,200,100,"Poziom 1",function(e) {
+		new ttg_game_gameobject_ui_ButtonObject(this,400,300,200,100,"Collision Test",function(e) {
 			game.loadLevel(new ttg_game_level_Level1(_g.main));
 		});
 		new ttg_game_gameobject_ui_ButtonObject(this,400,400,200,100,"Player Test",function(e1) {
@@ -12195,7 +12224,7 @@ ttg_game_level_LevelPlayerTest.prototype = $extend(ttg_game_level_Level.prototyp
 		this.bg = new ttg_game_level_TileBackground("levels/1");
 		this.main.addChild(this.bg);
 		var player = new ttg_game_gameobject_PlayerObject(this,23,45);
-		var trigger = new ttg_game_gameobject_Trigger(this,50,50,new ttg_game_physics_TriggerCollider(new ttg_game_physics_AABB(700,600,100,100)),player.collider,function() {
+		var trigger = new ttg_game_gameobject_Trigger(this,700,500,new ttg_game_physics_TriggerCollider(new ttg_game_physics_AABB(700,500,100,100)),player.collider,function() {
 			game.loadLevel(new ttg_game_level_LevelMenu(_g.main));
 		});
 		this.addCollider(new ttg_game_physics_AABB(150,150,500,50));
@@ -12217,8 +12246,8 @@ ttg_game_level_TileBackground.init = function() {
 	ttg_game_level_TileBackground.bgTileSheets.set("grass",value);
 	var value1 = ttg_game_level_TileBackground.createTilesheet("img/background/road.png");
 	ttg_game_level_TileBackground.bgTileSheets.set("road",value1);
-	var value2 = ttg_game_level_TileBackground.createTilesheet("img/background/grass.png");
-	ttg_game_level_TileBackground.bgTileSheets.set("tlo",value2);
+	var value2 = ttg_game_level_TileBackground.createTilesheet("img/background/background.png");
+	ttg_game_level_TileBackground.bgTileSheets.set("background",value2);
 };
 ttg_game_level_TileBackground.createTilesheet = function(imgPath) {
 	var img = openfl_Assets.getBitmapData(imgPath);

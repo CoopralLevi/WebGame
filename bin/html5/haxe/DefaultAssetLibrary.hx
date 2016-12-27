@@ -62,12 +62,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("img/background/background.png", __ASSET__img_background_background_png);
+		type.set ("img/background/background.png", AssetType.IMAGE);
 		className.set ("img/background/grass.png", __ASSET__img_background_grass_png);
 		type.set ("img/background/grass.png", AssetType.IMAGE);
 		className.set ("img/background/road.png", __ASSET__img_background_road_png);
 		type.set ("img/background/road.png", AssetType.IMAGE);
-		className.set ("img/background/tlo.png", __ASSET__img_background_tlo_png);
-		type.set ("img/background/tlo.png", AssetType.IMAGE);
 		className.set ("img/characters/player.png", __ASSET__img_characters_player_png);
 		type.set ("img/characters/player.png", AssetType.IMAGE);
 		className.set ("levels/1", __ASSET__levels_1);
@@ -79,15 +79,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "img/background/background.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "img/background/grass.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
 		id = "img/background/road.png";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
-		id = "img/background/tlo.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -121,14 +121,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		var useManifest = false;
 		
+		className.set ("img/background/background.png", __ASSET__img_background_background_png);
+		type.set ("img/background/background.png", AssetType.IMAGE);
+		
 		className.set ("img/background/grass.png", __ASSET__img_background_grass_png);
 		type.set ("img/background/grass.png", AssetType.IMAGE);
 		
 		className.set ("img/background/road.png", __ASSET__img_background_road_png);
 		type.set ("img/background/road.png", AssetType.IMAGE);
-		
-		className.set ("img/background/tlo.png", __ASSET__img_background_tlo_png);
-		type.set ("img/background/tlo.png", AssetType.IMAGE);
 		
 		className.set ("img/characters/player.png", __ASSET__img_characters_player_png);
 		type.set ("img/characters/player.png", AssetType.IMAGE);
@@ -783,9 +783,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
+@:keep @:bind #if display private #end class __ASSET__img_background_background_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_background_grass_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_background_road_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__img_background_tlo_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__img_characters_player_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__levels_1 extends null { }
 @:keep @:bind #if display private #end class __ASSET__levels_menu extends null { }
@@ -808,9 +808,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux || cpp)
 
 
+@:image("assets/img/background/background.png") #if display private #end class __ASSET__img_background_background_png extends lime.graphics.Image {}
 @:image("assets/img/background/grass.png") #if display private #end class __ASSET__img_background_grass_png extends lime.graphics.Image {}
 @:image("assets/img/background/road.png") #if display private #end class __ASSET__img_background_road_png extends lime.graphics.Image {}
-@:image("assets/img/background/tlo.png") #if display private #end class __ASSET__img_background_tlo_png extends lime.graphics.Image {}
 @:image("assets/img/characters/player.png") #if display private #end class __ASSET__img_characters_player_png extends lime.graphics.Image {}
 @:file("assets/levels/1") #if display private #end class __ASSET__levels_1 extends lime.utils.Bytes {}
 @:file("assets/levels/Menu") #if display private #end class __ASSET__levels_menu extends lime.utils.Bytes {}

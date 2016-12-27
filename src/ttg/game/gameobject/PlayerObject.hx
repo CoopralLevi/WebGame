@@ -77,7 +77,7 @@ class PlayerObject extends PhysObject
 		super.update();
 	}
 	
-	override public function render() 
+	override public function render()
 	{
 		super.render();
 		image.drawTiles(sprite.graphics, [x, y, state]);

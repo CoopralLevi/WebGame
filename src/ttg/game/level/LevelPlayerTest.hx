@@ -28,7 +28,7 @@ class LevelPlayerTest extends Level
 		
 		var player:PlayerObject = new PlayerObject(this, 23, 45);
 		
-		var trigger:Trigger = new Trigger(this, 50, 50, new TriggerCollider(new AABB(700, 600, 100, 100)), player.collider, function() { game.loadLevel(new LevelMenu(main)); });
+		var trigger:Trigger = new Trigger(this, 700, 500, new TriggerCollider(new AABB(700, 500, 100, 100)), player.collider, function() { game.loadLevel(new LevelMenu(main)); });
 		
 		addCollider(new AABB(150, 150, 500, 50));
 		addCollider(player.collider);

@@ -1,0 +1,163 @@
+Protagonist budzi się w rowie przy drodze jest cały obolały i nic nie pamięta.
+Protagonist: Wszystko mnie boli, nic nie pamiętam. Muszę sprawdzić co mam w plecaku.[miejsce na samouczek dotyczący ekipunku].
+Protagonist: Mam niewiele zapasów, powinienem się rozejrzeć [miejsce na samouczek dotyczący sterowania].
+Protagonist: Sprawdzę co mam w tobołkach [samouczek dotyczący interakcji z przedmiotami]
+Protagonist znajduje Karczmę
+Protagonist podchodzi do Inn Keepera[samouczek o interakcji z noc i handlu]
+Inn Keeper: Witaj jesteś tu nowy,może skusisz się na ciepły posiłek i nocleg.
+Protagonist; [to chyba dobry pomysł]: Ile kosztuje nocleg?
+Inn Keeper: Dla ciebie za 5 monet będzie jedzenie a nocleg 10.
+Protagonist: Dobra to ja poproszę kolacje nocleg i śniadanie.
+Protagonist idzie spać.
+Budzi się, następnie idzie do Inn Keepera po śniadanie. Nagle podchodzi do niego Blacksmith.
+Blacksmith: Witaj widzę że jesteś nowo przybyłym i wyglądasz na biednego , ale możesz dostać pieniądze za prace u mnie.
+Protagonist; [brakuje mi pieniędzy wiec jednak warto by było coś zarobić]: Dobra co chcesz.
+Blacksmith: Chodź za mną.
+Idą do kuźni.
+W kuźni.
+Blacksmith: Potrzebuje węgla ale na drodze do kopalni grasuje stwór.
+Protagonist: Dobrze,zrobię to ale potrzebuje tarczy.
+Blacksmith: Dobrze masz tu jedną powinna być dobra.
+Protagonist idzie do kopalni pod drodze spotyka {nie mam jeszcze pomysłu} zaczyna się samouczek do walki.
+Protagonist zabija to coś. zdobywa węgiel i idzie do Blacksmitha. 
+Blacksmith: Dziękuje za oczyszczenie drogi i przyniesienie węgla masz tu 50 monet za fatygę.
+Protagonist: Nie ma sprawy, jak byś coś jeszcze czegoś potrzebował to powiedz.
+Protagonist odchodzi [koniec samouczków,gracz może dowolnie poruszać sie po mapie].
+Protagonist: Dobra teraz powinienem pójść do karczmy coś zjeść i wykupić nocleg.
+Wchodzi do karczmy widzi zakapturzoną postać. 
+Hooded Man: Nareszcie cie znalazłem.
+Protagonist patrzy na niego dość zdziwiony bo go nie wie kto to jest.
+Hooded Man: Co tak na mnie patrzysz jak byś mnie nie znał...?  Najwidoczniej cię dorwali i wymazali ci pamięć jak zwykle mają w naturze. Ale spokojnie to minie niestety nie od razu. Wiem że mnie nie pamiętasz ale musisz mi zaufać.
+Protagonist: No dobrze nic nie pamiętam więc uznam że ci zaufam.
+Hooded Man: Powinieneś porozglądać się wokół i pomóc ludziom którzy potrzebują pomocy i dzięki temu powinno ci przywrócić przynajmniej skrawek pamięci. Przyjdę za 3 dni i zobaczymy co dalej.
+Długa noc od spotkania. Podczas snu Protagonistowi przypomina sobie jedno wydarzenie w którym brał on udział i był tam Hooded Man, i jeszcze jeden którego nie pamiętał.
+Nieznajomy: Zostaw nas w spokoju, nie oddam ci recepty.
+Hooded Man: Jeszcze tu wrócę a wtedy nie będę już miły. ZGINIECIE OBAJ.
+Protagonist budzi się w południe (normalnie rano) od Inn Keepera dostaje kartkę od zakapturzonego.
+Na kartce: „Nie mogłem czekać, musiałem ruszać do tego upierdliwego alchemika. Podążaj za mną, ale tylko wtedy, jeśli jesteś w stanie przetrwać noc. Oczekuję, że szybko do mnie dołączysz.”
+Pojawia się wspomnienie zakapturzonego i nagły obraz postaci z wizji
+Protagonist: Coś mi tu nie gra…
+Protagonist dostaje zadanie - „Znajdź sposób by przetrwać noc”. Dostępne opcje: Podejdź do stolika numer 1, rozmawiaj z siedzącym. Podejdź do stolika numer 2, rozmawiaj z grupą siedzących. Podejdź do lady, rozmawiaj z Inn Keeperem.
+ Stolik numer:
+ Protagonist: 1)witaj
+          2)hej
+          3)co słychać?
+ Siedzący:1)witaj
+          2)nie spoufalasz się za bardzo?
+          3)w porządku
+ Protagonist: 1)1]co słychać?
+          1)2]masz może chwilę na rozmowę?
+          2)1]wybacz, może jeszcze raz zaczniemy rozmowę? 
+          2)2]{odejście}
+          3)1]masz może chwilę na rozmowę?
+          3)2]nie będę ci przeszkadzał {odejście}
+ Siedzący:1)1]w porządku
+          1)2]czemu by nie?
+          2)1]{cofnięcie do samego początku rozmowy}
+          3)1]nie {odejście}
+ Protagonist: 1)1]masz może chwilę na rozmowę?
+          1)2]wiesz może jak można przetrwać noc w drodze?
+ Siedzący:1)1]obawiam się, że nie
+          1)2]przykro mi, ale nie. Wydaje mi się, że może ktoś z tamtej grupki będzie coś wiedział
+Protagonist odchodzi od stolika numer 1, idzie do stolika numer 2
+ Protagonist: 1)witajcie
+          2)jak się macie?
+ Grupka:  1)witaj
+          2)dobrze, bracie, a ty?
+ Protagonist: 1)1]możemy pogadać?
+          1)2]jak tam?
+          2)1]w porządku, możemy pogadać?
+          2)2]kiepsko
+ Grupka:  1)1]pewnie
+          1)2]dobrze, bracie, a ty?
+          2)1]pewnie, bracie
+          2)2]a czemuż to? Masz tu 10 srebrników, na poprawę humoru, bracie!
+ Protagonist: 1)1]wiecie może jak przetrwać noc w drodze?
+          1)2]dobrze, nie będę wam przeszkadzał {odejście}
+          2)1]wiecie może jak przetrwać noc w drodze?
+          2)2]dziękuje, wiecie może jak przetrwać noc w drodze?
+ Grupka:  1)1]nie, bracie
+          2)1]nie, ale może Inn Keeper będzie coś wiedział?
+          2)2]nie, przykro nam, bracie
+Protagonist odchodzi od stolika numer 2, idzie do lady.
+Inn Keeper:Witaj, przyjacielu
+ Protagonist:  1)witaj
+           2)czy wiesz jak przetrwać noc?
+ Inn Keeper:1)czego potrzebujesz?
+           2)takie informacje kosztują
+ Protagonist:  1)wiesz może jak przetrwać noc?
+           2)1]dusigrosz {odejście}
+           2)2]ile są warte?
+ Inn Keeper:1)nie, musisz spróbować na zewnątrz {odejście}
+           2)5 srebrników 
+ Protagonist:  2)1]proszę {płaci}
+           2)2]sknera {odejście} 
+ Inn Keeper:2)nie wiem jak przetrwać noc, musisz popytać na zewnątrz 
+Protagonist odchodzi od lady, podchodzi do drzwi, animacja wyjścia z karczmy         
+Przed karczmą jest Drunkard, Łotr i Minstrel. 
+ Protagonist:  1)witaj
+           2)co tutaj robisz? 
+ Drunkard:    1)no witaj, witaj
+           2)siedzę, nie widać?
+ Protagonist:  1)wiesz może jak przetrwać noc?
+           2)1]widać, gburze
+           2)2]…
+ Drunkard:    1)nawet jeśli, to co ci do tego?
+           2)1]może grzeczniej do osoby starszej, zwyrodnialcu? 
+           2)2]zabrakło ci języka w gębie, pomiocie?
+ Protagonist:  1)1]chciałbym się dowiedzieć jak to zrobić 
+           1)2]rozumiem, że kultura wyszła trzaskając drzwiami z twojego życia?
+           2)1]1#a może zamkniesz swoją krzywą jadaczkę?
+           2)1]2#zwyrodnialcu? 
+           2)1]3#… 
+           2)2]1#nie, tylko zatkało nos od twojego smrodu
+           2)2]2#coś jeszcze, cwaniaku?
+ Drunkard:    1)1]a ja chciałbym być bogaty, wyglądam ci na bogatego? 
+           1)2]tak jak u ciebie intelekt? 
+           2)1]1#a może pójdziesz w diabły?
+           2)1]2#głuchy jesteś, czy co?
+           2)1]3#idź w diabły, niemowo
+           2)2]1#poratuj więc i obdaruj groszami… 
+           2)2]2#weź idź w diabły 
+ Protagonist:  1)1]1#nie bardzo
+           1)1]2#myślisz, że jesteś cwaniak?
+           2)2]1#…{odejście}
+ Drunkard:    1)1]1#no właśnie, bystrzaku, idź w diabły {odejście}
+           1)1]2#a idź w diabły {odejście}
+ 
+ 
+
+ Protagonist:  1)witaj
+           2)czy wiesz jak przetrwać noc?
+ Łotr:     za dużo gadasz, nie podoba mi się to. Wolisz oddać pieniądze czy życie?
+ Protagonist:  {traci wszystkie pieniądze}
+
+                  
+ Minstrel: Witaj przyjacielu, chcesz posłuchać ballady?
+ Protagonist:  1)Witaj, nie mam czasu na ballady 
+           2)witaj, obawiam się, że nie po to do ciebie przyszedłem…
+ Minstrel: 1)więc ja nie mam czasu na rozmowę z tobą {odejście}
+           2)a po cóż przyszedłeś?
+ Protagonist:  2)1]czy wiesz może jak przetrwać noc?
+           2)2]dużo podróżujesz?
+ Minstrel: 2)1]mogę ci udzielić te informacje, ale w zamian będę potrzebował, żebyś coś dla mnie zrobił
+           2)2]całkiem sporo, czemu pytasz?
+ Protagonist:  2)1]1#co mam zrobić? 
+           2)1]2#nie mam na to czasu {odejście} 
+           2)2]1#potrzebuje się dowiedzieć jak przetrwać noc
+           2)2]2#czy jesteś w drodze również w nocy?
+ Minstrel: 2)1]potrzebuję drewna na opał, dokładnie dwadzieścia patyków
+           2)2]1#potrzebujesz namiotu 
+           2)2]2#zgadza się czemu pytasz?             
+ Protagonist:  2)1]1#dobrze, daj mi trochę czasu {odejście, otrzymanie zadania}
+           2)1]2#i co jeszcze? może domek mam ci zbudować? {odejście}
+           2)2]1#gdzie go mogę zdobyć?
+           2)2]2#potrzebuje się dowiedzieć jak przetrwać noc w drodze
+ Minstrel: 2)2]1#w dzisiejszych czasach nie kupisz namiotu, musisz go sam zrobić, a do tego potrzebujesz specjalnych materiałów, ale aktualnie potrzebuję kogoś do podróży i mam własny namiot
+           2)2]2#potrzebujesz namiotu 
+ Protagonist:  2)2]1#mogę się do ciebie przyłączyć?
+           2)2]2#gdzie go mogę zdobyć?
+ Minstrel: 2)2]1#oczywiście, przyjacielu! {koniec intra}
+           2)2]2#w dzisiejszych czasach nie kupisz namiotu, musisz go sam zrobić, a do tego potrzebujesz specjalnych materiałów, ale aktualnie potrzebuję kogoś do podróży i mam własny namiot
+ Protagonist:  2)2]2#mogę się do ciebie przyłączyć?
+ Minstrel: 2)2]2#oczywiście, przyjacielu! {koniec intra}.

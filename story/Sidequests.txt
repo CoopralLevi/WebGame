@@ -1,0 +1,7 @@
+Sidequests from the Blacksmith:
+1.I need iron, bring me ore from the mine.(different versions, first 15 units then 30, 45... reward increases with the task)
+2.Bring me food.(reward slightly higher than the price of a meal)
+3.Bring me coal.(same as the iron quest)
+Sidequests from the Minstrel
+1.Bring me food.(same as the Blacksmith's)
+...

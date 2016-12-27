@@ -24,7 +24,7 @@ class LevelMenu extends Level
 		bg = new TileBackground("levels/Menu");
 		main.addChild(bg);
 		
-		new ButtonObject(this, 400, 300, 200, 100, "Poziom 1", function(e) { 
+		new ButtonObject(this, 400, 300, 200, 100, "Collision Test", function(e) { 
 			game.loadLevel(new Level1(main));
 		} );
 		new ButtonObject(this, 400, 400, 200, 100, "Player Test", function(e) { 

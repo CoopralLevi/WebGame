@@ -3,6 +3,7 @@ package ttg.game.gameobject;
 import flash.geom.Point;
 import ttg.game.level.Level;
 import ttg.game.physics.Collider;
+import ttg.game.physics.PhysicsConstants;
 
 /**
  * ...
@@ -35,6 +36,10 @@ class PhysObject extends GameObject
 		forces = new Array<Point>();
 		
 		velocity = velocity.add(netForce);
+		
+		if (velocity.length < PhysicsConstants.MIN_VEL_MAG)
+			velocity = new Point();
+		
 		addForce(new Point(-velocity.x * friction, -velocity.y * friction));
 		
 		for (col in level.colliders)

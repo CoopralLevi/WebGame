@@ -1,6 +1,8 @@
 package ttg.game.level;
 
 import openfl.display.FPS;
+import openfl.display.GradientType;
+import openfl.display.Sprite;
 import ttg.game.Game;
 import ttg.game.Main;
 import ttg.game.gameobject.TestObject;
@@ -16,7 +18,10 @@ import ttg.game.physics.TriggerCollider;
  */
 class Level1 extends Level
 {
-
+	var transitionTimer:Int;
+	var transitionGraphic:Sprite;
+	var g:Game;
+	
 	public function new(m:Main) 
 	{
 		super(m);
@@ -25,6 +30,8 @@ class Level1 extends Level
 	override public function load(game:Game) 
 	{
 		super.load(game);
+		
+		g = game;
 		
 		bg = new TileBackground("levels/1");
 		main.addChild(bg);
@@ -46,6 +53,27 @@ class Level1 extends Level
 		addCollider(new BorderCollider(true, true, 600));
 		
 		main.addChild(debugSprite);
+		transitionGraphic = new Sprite();
+		main.addChild(transitionGraphic);
+		
+		game.pause();
+		transitionTimer = 240;
+	}
+	
+	override public function pausedUpdate() 
+	{
+		transitionTimer--;
+		
+		transitionGraphic.graphics.clear();
+		transitionGraphic.graphics.beginFill(0x000, transitionTimer / 240);
+		transitionGraphic.graphics.drawRect(0, 0, 800, 600);
+		transitionGraphic.graphics.endFill();
+	
+		if (transitionTimer <= 0)
+		{
+			g.unPause();
+			main.removeChild(transitionGraphic);
+		}
 	}
 	
 }

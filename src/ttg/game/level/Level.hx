@@ -43,6 +43,11 @@ class Level
 		}
 	}
 	
+	public function pausedUpdate()
+	{
+		
+	}
+	
 	public function render()
 	{
 		bg.render();

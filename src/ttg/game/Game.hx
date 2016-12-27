@@ -40,6 +40,9 @@ class Game
 			level.update();
 		
 		render();
+		
+		if (state == GameState.Paused)
+			level.pausedUpdate();
 	}
 	
 	public function render()
@@ -55,5 +58,15 @@ class Game
 		l.load(this);
 		level = l;
 		main.addChild(fps);
+	}
+	
+	public function pause()
+	{
+		state = GameState.Paused;
+	}
+	
+	public function unPause()
+	{
+		state = GameState.Playing;
 	}
 }

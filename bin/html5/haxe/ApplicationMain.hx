@@ -30,15 +30,15 @@ class ApplicationMain {
 		var types = [];
 		
 		
+		urls.push ("img/background/background.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("img/background/grass.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("img/background/road.png");
-		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("img/background/tlo.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -115,7 +115,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "1",
+			build: "54",
 			company: "TTGTeam",
 			file: "WebGame",
 			fps: 60,
